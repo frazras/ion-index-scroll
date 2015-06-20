@@ -1,11 +1,12 @@
 {
-  "name": "ion-alpha-scroll",
-  "version": "0.1.2",
+  "name": "ion-index-scroll",
+  "version": "0.1.3",
   "authors": [
-    "aquint <anthonyquinton92@gmail.com>"
+    "aquint <anthonyquinton92@gmail.com>",
+    "Bill Santo"
   ],
-  "description": "Alphabetical indexing and scrolling for ionic lists",
-  "main": "./src/ion-alpha-scroll.js",
+  "description": "Alphanumeric indexing and scrolling for ionic lists",
+  "main": "./src/ion-index-scroll.js",
   "keywords": [
     "ionic",
     "ion",

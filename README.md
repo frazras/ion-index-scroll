@@ -19,9 +19,9 @@ ion-index-scroll
 
 # Installation
 
-1. Use bower to install the new module:
+1. Use bower to install the new module.  For reference, http://bower.io/docs/api/#install:
 ```bash
-bower install ion-index-scroll --save
+bower install https://github.com/billsanto/ion-index-scroll.git --save
 ```
 2. Import the `ion-index-scroll` javascript and css file into your HTML file:
 ```html
