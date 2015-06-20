@@ -8,7 +8,7 @@ ion-index-scroll
 - [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Advanced Usage](#advancedusage)
+- [Advanced Usage](#advanced-usage)
 - [Issues](#issues)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
@@ -175,7 +175,7 @@ contacts-list.html
 # Advanced Usage
 
 A more complex example follows, where the sort key differs from the displayed key.  Specifically, we sort by the hidden "position" key, which represents the natural ordering.
-However, the scroll index is represented by one of the four primary or permanent keys representing the common nomenclature, but having no consistent ordering behavior.  Also, note that selecting one of primary keys will not display values where the keys are empty:
+However, the scroll index is represented by one of the four primary or permanent keys representing the common nomenclature, but having no consistent ordering behavior.  Also, note that selecting one of primary keys will not display a list or header element when the values are empty:
 
 services.js
 ```javascript
