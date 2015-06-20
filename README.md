@@ -15,7 +15,7 @@ ion-index-scroll
 
 # Demo
 
-![Animated demo](https://github.com/aquint/ion-index-scroll/raw/master/demo.gif)
+![Animated demo](https://github.com/billsanto/ion-index-scroll/blob/master/demo.gif)
 
 # Installation
 
