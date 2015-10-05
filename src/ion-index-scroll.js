@@ -1,7 +1,7 @@
 angular.module('ion-index-scroll', [])
     .directive('ionIndexScroll', [
-        '$ionicScrollDelegate', '$location', '$timeout', '$document',
-        function ($ionicScrollDelegate, $location, $timeout, $document) {
+        '$ionicScrollDelegate', '$location', '$q', '$timeout', '$document', '$anchorScroll',
+        function ($ionicScrollDelegate, $location, $q, $timeout, $document, $anchorScroll) {
             return {
                 require: '?ngModel',
                 restrict: 'AE',
@@ -10,7 +10,7 @@ angular.module('ion-index-scroll', [])
                     var children = tElement.contents();
                     var template = angular.element([
                         '<ion-list class="ion_index_list_outer">',
-                        '<ion-scroll delegate-handle="indexScroll">',
+                        '<ion-scroll delegate-handle="indexScroll" has-bouncing="false">',
                         '<div data-ng-repeat="items in sortedItems" class="ion_index_list">',
                         '<ion-item class="item item-divider" id="index_{{modelName}}_{{items[0].dividerHeader}}">{{items[0].dividerHeader}}</ion-item>',
                         '<ion-item ng-repeat="item in items"></ion-item>',
@@ -92,8 +92,18 @@ angular.module('ion-index-scroll', [])
                             scope.sidebarScrollIndex = attrs.useCompleteAlphabet == 'true' ? createSidebarScrollIndexByAlphabet() : createSidebarScrollIndex(preSortedItems);
 
                             scope.indexScrollGoToList = function (id) {
-                                $location.hash(id);
-                                $ionicScrollDelegate.$getByHandle('indexScroll').anchorScroll();
+                                //var deferred = $q.defer();
+                                //
+                                //$timeout(function() {
+                                //    deferred.resolve($location.hash(id));
+                                //    $anchorScroll(true);    // Note ionicScrollDelegate does not behave correctly, so we use anchorScroll instead
+                                //
+                                //}, 1);
+                                //
+                                //return deferred.promise;
+
+                                var divTop = document.getElementById(id).offsetTop;
+                                $ionicScrollDelegate.scrollTo(0, divTop, true);
                             };
 
                             // Create alphabet object for sidebar

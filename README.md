@@ -17,6 +17,7 @@ ion-index-scroll
 
 ![Animated demo](https://github.com/billsanto/ion-index-scroll/blob/master/demo.gif)
 
+To install the library embedded in a fully functioning demo, please see https://github.com/billsanto/ion-index-scroll-demo
 # Installation
 
 1. Use bower to install the new module.  For reference, http://bower.io/docs/api/#install:
